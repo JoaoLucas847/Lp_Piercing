@@ -1,0 +1,324 @@
+body, p, h1, h2, ul, li, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+img {
+	display: flexbox;
+	max-width: 100%;
+}
+
+.titulo-sections{
+	 font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #F5DF4D;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+
+.titulo-sections::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #F5DF4D;
+	margin: 8px auto;
+	margin-bottom: 30px;
+}
+
+.btn {
+	border: 3px solid #F5DF4D;
+	padding: 10px 50px;
+	color: #F5DF4D;
+	font-size: 14px;
+	line-height: 100px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+
+.btn:hover {
+	color: #2E2E2E;
+	border-color: #2E2E2E;
+}
+
+.btn.btn-preto:hover {
+	color: #2E2E2E;
+	border-color: #2E2E2E;
+}
+
+.subtitulo {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.subtitulo:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #000;
+	margin: 8px auto;
+}
+
+.subtitulo-interno {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #000;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.subtitulo-interno:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #000;
+	margin: 8px 0;
+}
+
+
+.header {
+	
+	top: 0;
+	width: 97,5%;
+	background: #2E2E2E; 
+	padding: 15px ;
+	z-index: 10;
+}
+
+.header_menu {
+	text-align:end;
+}
+
+.header_menu ul li {
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.header_menu ul li a {
+	color: #F5DF4D;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 15px 0;
+}
+
+.header_menu ul li a:hover {
+	color: #FFF;
+}
+
+.header_menu ul li a.menu_ativo {
+	color: #FFF;
+}
+
+
+.home {
+	width:auto;
+	height: auto;
+	background-image: url("./img/bne.jpg");
+	background-size: cover;
+	background-position: center 54%;
+	margin-top: auto;
+	text-align: center;
+	padding-top: 300px;
+	line-break: auto;
+	margin-bottom: 100px;
+}
+
+.home::after {
+	content: '';
+	background: #00000069;
+	height: 100%;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.home h1 {
+	font-size: 48px;
+	color: #F5DF4D;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 50px;
+	
+}
+
+.home h2 {
+	font-size: 23px;
+	color: #F5DF4D;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+.sobre{
+    font-size: 28px;
+	line-height: 100px;
+	font-weight:bold;
+	letter-spacing: .1em;
+	color: #2E2E2E;
+	text-transform: uppercase;
+	text-align:center;
+	margin-bottom: 100px;
+}
+
+.sobre p {
+	font-size: 16px;
+	color: #2E2E2E;
+	font-weight:initial;
+	text-transform: uppercase;
+
+}
+.container {
+    display: flex;
+}
+
+.sobre_int  {
+    flex: 1;
+}
+
+
+.beneficios{
+    font-size: 24px;
+	line-height: 100px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #2E2E2E;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.beneficios ul li{
+    font-size: 16px;
+	line-height: 30px;
+	
+	font-family: Georgia, "Times New Roman", serif;
+	display: flex;
+	margin-right: 0px;
+	
+}
+
+
+
+.depoimentos{
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #2E2E2E;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+.depoimento{
+    content: "";
+}
+
+
+
+
+
+.perguntas{
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	color: #2E2E2E;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+.faq-lista {
+	font-size: 18px;
+	font-weight: bold;
+    text-align: center;
+	padding: 80px 0px;
+	border-bottom: #2E2E2E ;
+	align-items: center;
+    justify-content: space-between;
+}
+
+
+.contato {
+	width: 100%;
+	background: #2E2E2E;
+	color: #fff;
+	padding: 40px 0;
+    justify-content: space-around;
+    display: flex;
+}
+
+.contato h3 {
+	font-size: 18px;
+	line-height: 25px;
+	color: #F5DF4D;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: bold;
+    text-align: center;
+}
+
+.contato h3:after {
+	content: "";
+	width: 150px;
+    margin-bottom: 30px;
+    
+    color: #F5DF4D;
+	
+	
+}
+
+
+
+.dados ul li {
+	font-size: 14px;
+	line-height: 20px;
+	font-family: Georgia, "Times New Roman", serif;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.dados ul li a {
+	border: 3px solid #F5DF4D;
+	display: inline-block;
+	padding:6px ;
+}
+
+.dados ul li a:hover {
+	border-color: #fff;
+}
+
+.copy {
+	width: 100%;
+	background: #F5DF4D;
+	padding: 20px 0;
+    text-align-last: center;
+}
