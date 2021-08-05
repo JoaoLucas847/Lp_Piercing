@@ -28,20 +28,19 @@ ul {
     display: grid;
 	grid-column: 1/4;
 	grid-template-columns: 120px 1fr 120px;
-    margin-top: 4rem;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .grid-section {
 	display: grid;
 	grid-column: 2/3;
 	grid-template-columns: 120px 1fr 120px;
-	margin-top: 4rem;
+	padding: 100px 0;
 }
 
 .titulo-section {
 	align-items: center;
-	color: #FA76BB;
+	color: #CCAABE;
 	display: flex;
 	flex-direction: column;
 	font-size: 2rem;
@@ -52,7 +51,7 @@ ul {
 
 .titulo-section::after {
 	content: "";
-	background: #FA76BB;
+	background: #CCAABE;
 	display: block;
 	margin-top: 10px;
 	height: 3px;
@@ -60,38 +59,30 @@ ul {
 }
 
 .btn {
-	border: 3px solid #FA76BB;
-	color: #FA76BB;
+	border: 3px solid #FFF;
+	color: #FFF;
 	cursor: pointer;
 	font-weight: bold;
 	letter-spacing: .1em;
 	padding: 10px 50px;
+	text-decoration: none;
 	text-transform: uppercase;
 }
 
 .btn:hover {
+	color: #7A3A5B;
+	border-color: #7A3A5B;
+}
+
+.titulo {
 	color: #FFF;
-	border-color: #FFF;
+	font-size: 3rem;
+	letter-spacing: .1em;
+	text-transform: uppercase;
 }
 
 .subtitulo {
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: bold;
-	letter-spacing: .1em;
-	color: #000;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-.subtitulo:after {
-	content: "";
-	display: block;
-	width: 60px;
-	height: 3px;
-	background: #000;
-	margin: 8px auto;
+	color: #FFF;
 }
 
 .subtitulo-interno {
@@ -113,9 +104,8 @@ ul {
 	margin: 8px 0;
 }
 
-
 .header {
-	background: #000; 
+	background: #7A3A5B; 
 	padding: 25px;
 }
 
@@ -132,60 +122,40 @@ ul {
 }
 
 .header_menu ul li a {
-	color: #FA76BB;
+	color: #CCAABE;
 	font-weight: bold;
 	letter-spacing: .1em;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-/* .header_menu ul li a:hover {
-	color: #FFF;
-}
-
-.header_menu ul li a.menu_ativo {
-	color: #FFF;
-} */
-
 .home {
     align-items: center;
-	background-image: url("./img/bne.jpg");
+	background-color: #CCAABE;
 	background-position: center 54%;
 	background-size: cover;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;	
+    display: grid;
+    grid-template-columns: 43% 57%;
 	height: 500px;
     justify-content: center;
 	position: relative;
 }
 
-.home::after {
-	content: '';
-	background: #0000007a;
-	display: block;
-	position: absolute;
+.img-home {
+	background-image: url("./img/bne.jpg");
+	background-position: center;
+	background-size: cover;
+	clip-path: polygon(0% 850%, 100% 0%, 0% -30%);
 	height: 100%;
 	width: 100%;
 }
 
-.home h1 {
-	font-size: 48px;
-	color: #FA76BB;
-	font-weight: bold;
-	text-transform: uppercase;
-	line-height: 50px;
-}
-
-.home h2 {
-	font-size: 23px;
-	color: #FA76BB;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.home h1, .home h2, .home span {
-	z-index: 1;
+.text-home {
+    align-items: baseline;
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+	animation: intro 2s forwards;
 }
 
 .content {
@@ -206,11 +176,11 @@ ul {
 
 .sobre-img {
     align-items: center;
-	background-color: #FA76BB;
+	background-color: #CCAABE;
 	border-radius: 50%;
     display: flex;
     justify-content: center;
-	width: 40%;
+	width: 50%;
 }
 
 .sobre-img img {
@@ -224,6 +194,7 @@ ul {
 	grid-template-rows: repeat(2, 200px);
 	justify-items: center;
     margin-top: 40px;
+	width: 100%;
 }
 
 .item-lista-beneficios {
@@ -231,6 +202,7 @@ ul {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+	width: 100%;
 }
 
 .item-lista-beneficios span {
@@ -315,7 +287,7 @@ ul {
 
 .faq-lista dt::before {
     content: '';
-    background: #FA76BB;
+    background: #CCAABE;
     display: inline-block;
     height: 10px;
     margin-right: 10px;
@@ -334,7 +306,7 @@ ul {
 
 .dados li::before {
 	content: '';
-    background: #FA76BB;
+    background: #CCAABE;
     display: inline-block;
     height: 10px;
     margin-right: 10px;
@@ -345,12 +317,12 @@ ul {
 	display: flex;
 	gap: 35px;
 	grid-column: 2;
-	margin: 4rem 0;
+	margin-top: 2rem;
 }
 
 .copy {
 	align-items: center;
-	background: #000;
+	background: #7A3A5B;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -358,10 +330,68 @@ ul {
 }
 
 .copy p {
-	color: #FA76BB;
+	color: #CCAABE;
 }
 
 .redes-sociais {
 	display: flex;
 	gap: 20px;
+}
+
+@media(max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes intro {
+    from {
+        opacity: 0;
+		transform: translate3d(-30px, 10px, 0);
+    }
+    to {
+        opacity: 1;
+		transform: translate3d(0, 0, 0);
+    }
+}
+
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .3s;
+}
+
+.js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: .3s;
+}
+
+.js .js-accordion dd {
+    display: none;
+}
+
+.js-accordion dt::after {
+    content: '▾';
+    margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+    content: '▴';
+}
+
+.js-accordion dd.ativo {
+    display: block;
+    animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
 }

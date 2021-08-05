@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menny Piercer</title>
-    
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.documentElement.className += ' js';
+    </script>
 </head>
 <body>
     <header class="grid-all header">
-        <nav class="header_menu">
+        <nav class="header_menu js-menu">
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
@@ -23,12 +26,19 @@
     </header>
 
     <section class="grid-all home">
-        <h1>Venha fazer seu piercing conosco!</h1>
-        <h2>Faça um orçamento diretamente pelo whatsapp</h2>
-        <span class="btn">Whastapp</span>
+        <div class="img-home"></div>
+        <div class="text-home">
+            <h1 class="titulo">Venha fazer seu piercing conosco!</h1>
+            <h2 class="subtitulo">Faça um orçamento diretamente pelo whatsapp</h2>
+            <a class="btn" href="https://api.whatsapp.com/send?phone=5511942085153&text=Ol%C3%A1,%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20Piercing,%20me%20chamo:" target="_blank">
+                <span>
+                    Whastapp
+                </span>
+            </a>
+        </div>
     </section>
 
-    <section class="grid-section sobre" id="sobre">
+    <section class="grid-section sobre js-scroll" id="sobre">
         <h1 class="titulo-section">Sobre</h1>
         <div class="content">
             <div class="sobre-texto">
@@ -41,7 +51,7 @@
         </div>
     </section>
 
-    <section class="grid-all-section beneficios" id="beneficios">
+    <section class="grid-all-section beneficios js-scroll" id="beneficios">
         <h1 class="titulo-section">Benefícios dos nossos piercings</h1>
         <div class="content">
             <div class="lista-beneficios">
@@ -67,7 +77,7 @@
         </div>
     </section>
 
-    <section class="grid-section depoimentos" id="depoimentos">
+    <section class="grid-section depoimentos js-scroll" id="depoimentos">
         <h1 class="titulo-section">Depoimentos</h1>
         <div class="content-depoimentos">
             <div class="depoimento">
@@ -105,10 +115,10 @@
         </div>
     </section>
 
-    <section class="grid-all-section perguntas" id="faq">
+    <section class="grid-all-section perguntas js-scroll" id="faq">
         <h1 class="titulo-section">Perguntas Frequentes</h1>
         <div class="content">
-            <dl class="faq-lista">
+            <dl class="faq-lista js-accordion">
                 <dt>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</dt>
                 <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos ipsam, velit reiciendis quidem, accusantium praesentium distinctio magnam, repellat harum quo placeat exercitationem ea libero ipsum est sapiente repudiandae quis! Cupiditate!</dd>
     
@@ -121,7 +131,7 @@
         </div>
     </section>
 
-    <section class="grid-section contato" id="contato" >
+    <section class="grid-section contato js-scroll" id="contato" >
         <h1 class="titulo-section">Contato</h1>
         <div class="content-contato">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.013160268608!2d-46.41747368506888!3d-23.71122407302866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6d448e71d10b%3A0x85e16ef76b2e4297!2sMenny_Piercer!5e0!3m2!1spt-BR!2sbr!4v1628198049559!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -140,5 +150,7 @@
             <a href="#"><img src="img/logo-instagram.svg" alt="Logo instagram"></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
