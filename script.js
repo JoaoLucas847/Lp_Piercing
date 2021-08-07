@@ -63,7 +63,7 @@ function initAccordion() {
             item.addEventListener('click', activeAccordion)
         })
         
-    }
+    } 
 
 }
 initAccordion();

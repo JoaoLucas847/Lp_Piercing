@@ -23,7 +23,7 @@ ul {
 }
 
 .grid-all-section {
-	background: #7A3A5B;
+	background: #D1569f;
     color: #FFF;
     display: grid;
 	grid-column: 1/4;
@@ -70,8 +70,8 @@ ul {
 }
 
 .btn:hover {
-	color: #7A3A5B;
-	border-color: #7A3A5B;
+	color: #D1569f;
+	border-color: #D1569f;
 }
 
 .titulo {
@@ -104,8 +104,14 @@ ul {
 	margin: 8px 0;
 }
 
+.png {
+    max-width: 10%;
+    height: 80px;
+    
+}
+
 .header {
-	background: #7A3A5B; 
+	background: #D1569f; 
 	padding: 25px;
 }
 
@@ -230,8 +236,9 @@ ul {
 }
 
 .img-beneficios-3 {
-	background-image: url("./img/imagem-13.jpg");
+	background-image: url("./img/imagem-14.jpg");
 }
+
 
 .content-depoimentos {
 	display: grid;
@@ -302,6 +309,26 @@ ul {
 
 .dados li {
 	margin-bottom: .5rem;
+	margin-left: 30px;
+	padding: 5px 25px;
+}
+
+.dados a {
+	margin-left: 80px;
+	margin-top: 20px;
+	border: 3px solid #CCAABE;
+	color: #CCAABE;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+}
+.dados  a:hover {
+	color: #000;
+	border-color: #000;
+	
 }
 
 .dados li::before {
@@ -322,7 +349,7 @@ ul {
 
 .copy {
 	align-items: center;
-	background: #7A3A5B;
+	background: #D1569f;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -338,10 +365,14 @@ ul {
 	gap: 20px;
 }
 
-@media(max-width: 700px) {
-    body {
+@media only screen and (min-width: 600px) and (orientation:landscape) {
+    
+	body, html {
         grid-template-columns: 1fr;
+		margin: 0;
+		padding: 0;
     }
+	
 }
 
 @keyframes intro {
