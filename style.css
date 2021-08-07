@@ -3,6 +3,10 @@ body, p, h1, h2, ul, li, dd, dt, dl {
     padding: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	display: grid;
 	grid-template-columns: 120px 1fr 120px;
@@ -32,9 +36,7 @@ ul {
 }
 
 .grid-section {
-	display: grid;
 	grid-column: 2/3;
-	grid-template-columns: 120px 1fr 120px;
 	padding: 100px 0;
 }
 
@@ -111,7 +113,10 @@ ul {
 }
 
 .header {
-	background: #D1569f; 
+    align-items: center;
+	background: #D1569f;
+	display: flex;
+    justify-content: space-between;
 	padding: 25px;
 }
 
@@ -244,7 +249,7 @@ ul {
 	display: grid;
     gap: 50px;
 	grid-column: 2;
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(3, 1fr);
 	margin-top: 40px;
 }
 
@@ -307,28 +312,25 @@ ul {
     margin-left: 30px;
 }
 
-.dados li {
-	margin-bottom: .5rem;
-	margin-left: 30px;
-	padding: 5px 25px;
+.content-contato {
+	display: grid;
+	grid-column: 2;
+	grid-template-areas: 'mapa dados' 'mapa link';
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 25%;
+	margin-top: 2rem;
 }
 
-.dados a {
-	margin-left: 80px;
-	margin-top: 20px;
-	border: 3px solid #CCAABE;
-	color: #CCAABE;
-	cursor: pointer;
-	font-weight: bold;
-	padding: 5px 25px;
-	text-decoration: none;
-	text-transform: uppercase;
-	
+.content-contato iframe {
+	grid-area: mapa;
 }
-.dados  a:hover {
-	color: #000;
-	border-color: #000;
-	
+
+.dados {
+	grid-area: dados;
+}
+
+.dados li {
+	line-height: 2;
 }
 
 .dados li::before {
@@ -340,11 +342,23 @@ ul {
     width: 20px;
 }
 
-.content-contato {
-	display: flex;
-	gap: 35px;
-	grid-column: 2;
-	margin-top: 2rem;
+.content-contato a {
+	border: 3px solid #CCAABE;
+	color: #CCAABE;
+	cursor: pointer;
+	font-weight: bold;
+    height: 45px;
+	letter-spacing: .1em;
+	padding: 10px;
+    text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 200px;
+}
+
+.content-contato a:hover {
+	color: #000;
+	border-color: #000;
 }
 
 .copy {
@@ -365,13 +379,15 @@ ul {
 	gap: 20px;
 }
 
-@media only screen and (min-width: 600px) and (orientation:landscape) {
+@media only screen and (max-width: 600px) and (orientation:landscape) {
     
-	body, html {
+	body {
         grid-template-columns: 1fr;
-		margin: 0;
-		padding: 0;
     }
+
+	.grid-all, .grid-all-section, .grid-section {
+		grid-column: 1;
+	}
 	
 }
 
