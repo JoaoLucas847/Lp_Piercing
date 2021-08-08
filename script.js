@@ -55,11 +55,16 @@ function initAccordion() {
         accordionList[0].nextElementSibling.classList.add(activeClass);
         
         function activeAccordion() {
-            this.classList.toggle(activeClass);
-            this.nextElementSibling.classList.toggle(activeClass);
+            accordionList.forEach(item => {
+                item.classList.remove(activeClass);
+                item.nextElementSibling.classList.remove(activeClass);
+            });
+
+            this.classList.add(activeClass);
+            this.nextElementSibling.classList.add(activeClass);
         }
-        
-        accordionList.forEach(item => {
+
+        accordionList.forEach((item) => {
             item.addEventListener('click', activeAccordion)
         })
         
