@@ -72,3 +72,13 @@ function initAccordion() {
 
 }
 initAccordion();
+
+const navHamburguer = document.querySelector('.nav-hamburguer');
+const Hamburguer = document.querySelector('.hamburguer');
+
+const atualizarMenu = function(){
+    navHamburguer.classList.toggle('mostrarNav');
+    Hamburguer.classList.toggle('ativo');
+}
+
+Hamburguer.onclick = atualizarMenu;
