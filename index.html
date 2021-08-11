@@ -17,10 +17,9 @@
 
 <body class="grid-all">
     <header class="grid-all header">
-        <div class="grid-all logo">
-            <img src="img/finalpreto.svg" alt="Logo">
-        </div>
-        <div class="header-menu js-menu ">
+        <img src="img/finalpreto.svg" alt="Logo" class="logo">
+
+        <div class="header-menu js-menu">
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
@@ -33,17 +32,18 @@
                 <span></span>
                 <span></span>
             </div>
-            
+
         </div>
 
     </header>
-            <nav class="grid-all nav-hamburguer">
-                <a href="#sobre">Sobre</a>
-                <a href="#beneficios">Benefícios</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contato">Contato</a>
-            </nav>
+    
+    <nav class="nav-hamburguer js-menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
     <section class="grid-all home">
         <div class="img-home"></div>
@@ -104,6 +104,8 @@
     <section class="grid-section depoimentos js-scroll" id="depoimentos">
         <h1 class="titulo-section">Depoimentos</h1>
         <div class="content-depoimentos">
+            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+
             <div class="depoimento">
                 <p>Minha experiência foi muito maravilhosa, meu projeto ficou lindo, menny excelente profissional, e
                     higiene, segue todos os protocolos de segurança, perfeita.</p>
@@ -130,13 +132,8 @@
                 </div>
             </div>
 
-            <!-- <div class="depoimento">
-                <p>É uma excelente profissional que faz um trabalho incrível! Eu simplesmente amei o meu piercing!!</p>
-                <div class="perfil">
-                    <h2>Jéssica Silva</h2>
-                    <span>JS</span>
-                </div>
-            </div> -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
         </div>
     </section>
 

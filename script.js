@@ -73,12 +73,44 @@ function initAccordion() {
 }
 initAccordion();
 
-const navHamburguer = document.querySelector('.nav-hamburguer');
-const Hamburguer = document.querySelector('.hamburguer');
+function initNavegaMenu() {
+    const navHamburguer = document.querySelector('.nav-hamburguer');
+    const hamburguer = document.querySelector('.hamburguer');
+    const itemMenu = document.querySelectorAll('.nav-hamburguer a')
+    
+    function atualizarMenu() {
+        navHamburguer.classList.toggle('mostrarNav');
+        hamburguer.classList.toggle('ativo');
+    }
+    
+    itemMenu.forEach(item => {
+        item.onclick = atualizarMenu;
+    })
 
-const atualizarMenu = function(){
-    navHamburguer.classList.toggle('mostrarNav');
-    Hamburguer.classList.toggle('ativo');
+    hamburguer.onclick = atualizarMenu;
+}
+initNavegaMenu();
+
+// SLIDES DEPOIMENTOS
+let slideIndex = 1;
+if(window.innerWidth > 320 && window.innerWidth < 1000) {
+    showSlides(slideIndex);
 }
 
-Hamburguer.onclick = atualizarMenu;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.querySelectorAll('.depoimento');
+
+    if (n > slides.length) slideIndex = 1
+    if (n < 1) slideIndex = slides.length
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[slideIndex-1].style.display = 'flex';
+}
