@@ -173,10 +173,11 @@ nav {
     padding: 10px;
 }
 
-nav a{
+nav a {
     color: #CCAABE;
     font-weight: bold;
     padding: 5px;
+	text-transform: uppercase;
     text-decoration: none;
 }
 
