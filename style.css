@@ -218,11 +218,16 @@ nav a {
 }
 
 .img-home {
-	background-image: url("./img/bne.jpg");
-	background-position: center;
-	background-size: cover;
 	clip-path: polygon(0% 850%, 100% 0%, 0% -30%);
 	display: block;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.img-home-item {
+	background-position: center;
+	background-size: cover;
 	height: 100%;
 	width: 100%;
 }
@@ -288,29 +293,31 @@ nav a {
 	width: 70%;
 }
 
-.img-beneficios {
+.carousel-joias {
+	display: block;
+	grid-column: 1/4;
+	width: 100%;
+}
+
+.group-carousel-joia {
+	display: grid;
+	grid-template-columns: repeat(5, 25%);
+	grid-template-rows: 100%;
+	height: 100%;
+	justify-items: center;
+	overflow: hidden;
+	width: 100%;
+}
+
+.img-carousel-joia {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
-	box-shadow: 3px 0 10px #000;
 	display: block;
     height: 100%;
-	width: 50%;
+	width: 80%;
 }
-
-.img-beneficios-1 {
-	background-image: url("./img/imagem-3.jpg");
-}
-
-.img-beneficios-2 {
-	background-image: url("./img/imagem-11.jpg");
-}
-
-.img-beneficios-3 {
-	background-image: url("./img/imagem-14.jpg");
-}
-
 
 .content-depoimentos {
 	display: grid;
@@ -562,6 +569,10 @@ nav a {
 		display: none;
 	}
 
+	.carousel-joias {
+		display: none;
+	}
+
 	.contato {
 		padding: 100px 30px;
 	}
@@ -636,4 +647,14 @@ nav a {
         opacity: 1;
         max-height: 200px;
     }
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
 }
