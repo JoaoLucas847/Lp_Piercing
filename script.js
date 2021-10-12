@@ -114,3 +114,39 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = 'flex';
 }
+
+// SLIDES JOIAS
+let slideJoiasIdx = 0;
+
+function showSlidesJoias() {
+    let i;
+    let slides = document.getElementsByClassName("group-carousel-joia");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideJoiasIdx++;
+
+    if (slideJoiasIdx > slides.length) {slideJoiasIdx = 1}
+
+    slides[slideJoiasIdx-1].style.display = "grid";  
+    setTimeout(showSlidesJoias, 3000);
+}
+showSlidesJoias();
+
+// SLIDES PERFURAÇÃO - HEADER
+let slidePerfuracaoIdx = 0;
+
+function showSlidesPerfuracao() {
+    let i;
+    let slides = document.querySelectorAll(".img-home-item");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slidePerfuracaoIdx++;
+
+    if (slidePerfuracaoIdx > slides.length) {slidePerfuracaoIdx = 1}
+
+    slides[slidePerfuracaoIdx-1].style.display = "block";  
+    setTimeout(showSlidesPerfuracao, 3000);
+}
+showSlidesPerfuracao();
