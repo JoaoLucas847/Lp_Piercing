@@ -107,13 +107,25 @@ ul {
 .header {
     align-items: center;
 	background: #D1569f;
+	/* display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: flex-end; */
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
 	padding: 120px;
 	padding-top: 0px;
     padding-bottom: 0px;
 	z-index: 10;
 }
+
+.images-header {
+	display: flex;
+}
+
+/* .caricatura {
+	width: 15%;
+	padding: 5px 0;
+} */
 
 .hamburguer {
     align-items: center;
@@ -492,6 +504,10 @@ nav a {
 		padding: 20px;
 	}
 
+	/* .caricatura {
+		width: 30%;
+	}	 */
+
 	.home {
 		grid-template-columns: none;
 	}
@@ -570,7 +586,14 @@ nav a {
 	}
 
 	.carousel-joias {
-		display: none;
+		grid-column: initial;
+		height: 300px;
+	}
+
+	.group-carousel-joia {
+		gap: 20px 0;
+		grid-template-columns: repeat(2, 50%);
+		grid-template-rows: repeat(2, 45%);
 	}
 
 	.contato {
