@@ -268,12 +268,15 @@ nav a {
 
 .sobre-img {
     align-items: center;
+	background-color: #CCAABE;
+	border-radius: 50%;
     display: flex;
     justify-content: center;
 	width: 50%;
 }
 
 .sobre-img img {
+	border-radius: 50%;
     width: 90%;
 }
 
