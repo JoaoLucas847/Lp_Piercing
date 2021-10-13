@@ -500,7 +500,8 @@ nav a {
 	}
 
 	.caricatura {
-		width: 30%;
+		height: 100px;
+		width: 60px;
 	}	
 
 	.home {
@@ -531,7 +532,7 @@ nav a {
 	}
 
 	.logo {
-		height: 80px;
+		height: 99px;
 		width: 110px;
 	}
 
