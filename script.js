@@ -92,28 +92,22 @@ function initNavegaMenu() {
 initNavegaMenu();
 
 // SLIDES DEPOIMENTOS
-let slideIndex = 1;
-if(window.innerWidth > 320 && window.innerWidth < 1000) {
-    showSlides(slideIndex);
-}
+let slideDepoimentosIdx = 0;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
+function showSlidesDepoimentos() {
     let i;
-    let slides = document.querySelectorAll('.depoimento');
-
-    if (n > slides.length) slideIndex = 1
-    if (n < 1) slideIndex = slides.length
-
+    let slides = document.getElementsByClassName("group-carousel-depoimentos");
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].style.display = "none";
     }
+    slideDepoimentosIdx++;
 
-    slides[slideIndex-1].style.display = 'flex';
+    if (slideDepoimentosIdx > slides.length) {slideDepoimentosIdx = 1}
+
+    slides[slideDepoimentosIdx-1].style.display = "grid";  
+    setTimeout(showSlidesDepoimentos, 3000);
 }
+showSlidesDepoimentos();
 
 // SLIDES JOIAS
 let slideJoiasIdx = 0;
@@ -132,6 +126,24 @@ function showSlidesJoias() {
     setTimeout(showSlidesJoias, 3000);
 }
 showSlidesJoias();
+
+// SLIDES APLICAÇÕES
+let slideAplicacaoIdx = 0;
+
+function showSlidesAplicacao() {
+    let i;
+    let slides = document.getElementsByClassName("group-carousel-aplicacao");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideAplicacaoIdx++;
+
+    if (slideAplicacaoIdx > slides.length) {slideAplicacaoIdx = 1}
+
+    slides[slideAplicacaoIdx-1].style.display = "grid";  
+    setTimeout(showSlidesAplicacao, 3000);
+}
+showSlidesAplicacao();
 
 // SLIDES PERFURAÇÃO - HEADER
 let slidePerfuracaoIdx = 0;
