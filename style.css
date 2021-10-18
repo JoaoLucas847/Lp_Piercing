@@ -359,11 +359,13 @@ nav a {
 	display: block;
 	grid-column: 1/2;
 	width: 100%;
+	height: 350px;
+	margin-top: 25px;
 }
 
 .group-carousel-depoimentos {
 	display: block;
-	grid-template-columns: repeat(5, 25%);
+	grid-template-columns: repeat(2,50%);
 	grid-template-rows: 100%;
 	height: 100%;
 	justify-items: center;
@@ -372,7 +374,7 @@ nav a {
 }
 
 .img-carousel-depoimentos {
-	background-position: center;
+	background-position: unset;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
